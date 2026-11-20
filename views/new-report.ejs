@@ -1,0 +1,19 @@
+<%- include('partials/header', { title }) %>
+<section class="wrap form-section">
+  <a class="back" href="/">← Back to reports</a>
+  <div class="form-card">
+    <p class="eyebrow">Community report</p><h1>Post an item</h1>
+    <p class="muted">Share a few details so other students can recognize the item. Do not include phone numbers or private information.</p>
+    <% if (error) { %><p class="error" role="alert"><%= error %></p><% } %>
+    <form action="/reports" method="post">
+      <label for="type">Report type *</label>
+      <select id="type" name="type" required><option value="">Choose one</option><option value="Lost" <%= values.type === 'Lost' ? 'selected' : '' %>>Lost</option><option value="Found" <%= values.type === 'Found' ? 'selected' : '' %>>Found</option></select>
+      <label for="item">Item name *</label><input id="item" name="item" maxlength="80" required placeholder="e.g., Headphones" value="<%= values.item || '' %>">
+      <label for="location">Campus location *</label><input id="location" name="location" maxlength="80" required placeholder="e.g., Library entrance" value="<%= values.location || '' %>">
+      <label for="date">Date *</label><input id="date" name="date" type="date" required value="<%= values.date || '' %>">
+      <label for="details">Description (optional)</label><textarea id="details" name="details" maxlength="300" rows="4" placeholder="Color or distinguishing features"><%= values.details || '' %></textarea>
+      <button class="button" type="submit">Submit report</button>
+    </form>
+  </div>
+</section>
+<%- include('partials/footer') %>

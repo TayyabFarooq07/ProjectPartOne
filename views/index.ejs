@@ -1,0 +1,26 @@
+<%- include('partials/header', { title }) %>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">A simpler way to reconnect lost items</p>
+      <h1>Lost something on campus?<br><span>Start here.</span></h1>
+      <p class="intro">Post a lost or found item and check recent reports in one place.</p>
+      <a class="button" href="/reports/new">+ Post a Lost or Found Item</a>
+    </div>
+    <div class="hero-art" aria-hidden="true"><span class="hero-icon">⌕</span><p>Find what matters.</p></div>
+  </div>
+</section>
+<section class="wrap listing">
+  <div class="section-heading"><div><p class="eyebrow">Community board</p><h2>Recent reports</h2></div><span class="count"><%= reports.length %> reports</span></div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Status</th><th>Item</th><th>Last seen / found at</th><th>Date</th><th>Description</th></tr></thead>
+    <tbody>
+    <% reports.forEach(report => { %>
+      <tr><td><span class="pill <%= report.type.toLowerCase() %>"><%= report.type %></span></td><td class="item-name"><%= report.item %></td><td><%= report.location %></td><td><%= report.date %></td><td><%= report.details || '—' %></td></tr>
+    <% }) %>
+    <% if (reports.length === 0) { %><tr><td colspan="5">No reports yet. Post the first one.</td></tr><% } %>
+    </tbody>
+  </table></div>
+  <p class="note">First release: reports are stored temporarily in server memory and reset on restart. Do not post personal contact information.</p>
+</section>
+<%- include('partials/footer') %>

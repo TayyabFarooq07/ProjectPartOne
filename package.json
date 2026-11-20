@@ -1,0 +1,8 @@
+{
+  "name": "campus-lost-found-first-release",
+  "version": "1.0.0",
+  "private": true,
+  "description": "INFR3120 Project Part 1 prototype",
+  "scripts": {"start": "node app.js"},
+  "dependencies": {"express": "^4.21.2", "ejs": "^3.1.10"}
+}
