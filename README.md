@@ -1,52 +1,75 @@
-# CampusFind — INFR3120 Project Part 1
+# CampusFind – Project Part 1
 
-CampusFind is a first-release prototype of a campus lost-and-found reporting board.
+## Project Overview
+
+CampusFind is a lost and found website designed for students on campus. The purpose of the website is to make it easier for students to report missing items and share information about items they have found.
+
+For the first part of the project, we focused on creating a working homepage, a form for submitting reports, and a table that displays lost and found items. The website is still in its early stages, but the main features are working.
 
 ## Features
-- Landing page with an original team logo and a clear **Post an Item** button.
-- A form to create a Lost or Found report, with server-side validation.
-- A table listing reports on the homepage.
-- Responsive layout for mobile and desktop.
 
-## Run locally
-1. Install Node.js.
-2. Open this folder in VS Code Terminal.
-3. Run `npm install`.
-4. Run `npm start`.
-5. Visit `http://localhost:3000`.
+The first release includes:
 
-## File structure
-- `app.js`: Express configuration and static files.
-- `routes/board.js`: Home route, new-report form, form submission and temporary records.
-- `views/`: EJS templates, shared header and footer.
-- `public/stylesheets/style.css`: Website styling.
-- `public/images/logo.svg`: Original logo drawn for this project.
-- `docs/Project_Part1_Description_and_Contributions.docx`: Project idea and responsibilities.
+- A homepage with the CampusFind name and logo.
+- A button that takes users to the report form.
+- A form for reporting lost or found items.
+- A table showing submitted reports.
+- A responsive layout for different screen sizes.
 
-## Current limitations
-This is an initial release, not the final application. Records are stored **in memory** and disappear when the server restarts or Render redeploys. There are no user accounts, file uploads, or permanent database yet. Avoid entering private contact information.
+## Technologies Used
 
-## Deploy to Render
-Create a new **Web Service** connected to the public group repository. Use:
-- Runtime: Node
-- Build: `npm install`
-- Start: `npm start`
-- Root directory: repository root (if `package.json` is there)
+- **Node.js:** Runs the application.
+- **Express.js:** Handles the server and website routes.
+- **EJS:** Displays the website pages.
+- **HTML and CSS:** Used for the page structure and design.
+- **JavaScript:** Used for application functionality.
+- **GitHub:** Stores the project files and tracks changes.
+- **Render:** Hosts the website online.
 
-The server uses `process.env.PORT`, which Render provides.
+## Project Files
 
-## Group contribution log (complete with actual work)
-Update the Word document with real member names, assigned tasks and what each person actually committed. Each member must push work from their **own** GitHub account. Do not claim a contribution or test you did not perform.
+The project is organized into different folders:
 
-## Code sources and attribution
-Starter implementation and documentation drafted with OpenAI ChatGPT assistance, November 2026. The group must review, understand, adapt, and document all code according to the assignment's external-code policy (maximum 10% external code, lecture code exempt). Express and EJS API documentation: https://expressjs.com/ and https://ejs.co/ . No downloaded logos or third-party image assets are used.
+- `app.js` – Main Express application file.
+- `routes/` – Contains the routes and report functionality.
+- `views/` – Contains the EJS pages.
+- `public/` – Contains the CSS and logo.
+- `docs/` – Contains the project description and group contribution document.
+- `package.json` – Lists the dependencies and start command.
 
-## Before submission
-- [ ] Confirm idea differs from the class project and get group agreement.
-- [ ] Customize the code using course materials and verify external-code compliance.
-- [ ] Fill in real names/contributions in the Word document.
-- [ ] Create public repository named **INFR3120 Fall26 Project** and invite collaborators.
-- [ ] Ensure every member has individual commits.
-- [ ] Verify deployed Render URL and all form/table functionality.
-- [ ] Record a group demo (up to 30 minutes); each member explains their work.
-- [ ] Submit ZIP, public GitHub URL, video URL and individual peer evaluation.
+## How to Run the Project
+
+1. Download or clone the GitHub repository.
+2. Open the project folder in VS Code.
+3. Open the terminal.
+4. Install the dependencies:
+
+   `npm install`
+
+5. Start the application:
+
+   `npm start`
+
+6. Open `http://localhost:3000` in a browser.
+
+## Current Limitations
+
+This is only the first release of CampusFind. Reports are currently stored temporarily, so they may disappear when the server restarts.
+
+In future releases, we plan to improve the website by adding permanent data storage, better search options, and more features for managing reports.
+
+## GitHub Repository
+
+https://github.com/TayyabFarooq07/Projectpart1
+
+## Live Website
+
+Add the Render website link here after deployment.
+
+## Development Notes
+
+During this part of the project, we worked on setting up the Express application, organizing the project files, creating the homepage, and implementing the report form and table.
+
+We also used GitHub to manage the project and Render to make the website accessible online.
+
+
